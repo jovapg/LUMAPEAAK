@@ -1,0 +1,287 @@
+{
+  "company": {
+    "name": "LumaPeak Services",
+    "logoText": "LumaPeak",
+    "slogan": "A Fresh Look, A Brighter Home",
+    "phone": "425-922-4918",
+    "phoneLink": "+14259224918",
+    "email": "lumapeakservices@gmail.com",
+    "hours": "Monday – Saturday, 9:00 AM – 5:00 PM",
+    "serviceRadius": "We generally service locations within approximately 25 miles of Seattle. If your city isn't listed, call us to verify availability.",
+    "socials": [
+      { "name": "Instagram", "url": "https://www.instagram.com/lumapeak_services" },
+      { "name": "TikTok", "url": "https://www.tiktok.com/@lumapeak.services" },
+      { "name": "Facebook", "url": "https://www.facebook.com/share/1BTiB1YmEJ" }
+    ]
+  },
+  "home": {
+    "heroTitle": "Professional Exterior Cleaning for Your Home",
+    "heroSubtitle": "Window, roof, gutter, solar panel & skylight cleaning plus holiday lighting — serving homeowners across the Greater Seattle area.",
+    "ctaPrimary": "Get Your Free Quote",
+    "ctaSecondary": "Call 425-922-4918",
+    "heroImages": ["/hero/hero-1.jpg", "/hero/hero-2.jpg", "/hero/hero-3.jpg"],
+    "stats": [
+      { "value": "Licensed", "label": "& Insured" },
+      { "value": "100%", "label": "Satisfaction Guaranteed" },
+      { "value": "Same-Day", "label": "Response" },
+      { "value": "12+", "label": "Cities Served" }
+    ]
+  },
+  "services": [
+    {
+      "icon": "🪟",
+      "iconKey": "window",
+      "images": ["/services/window-exterior.jpg", "/services/window-ext-2.jpg", "/services/window-ext-3.jpg"],
+      "title": "Exterior Window Cleaning",
+      "price": "Starting at $150",
+      "description": "Deionized water system lets windows dry naturally — no streaks, spots or residue. Water Fed Pole system safely reaches high windows.",
+      "includes": ["Exterior glass cleaning", "Window frame cleaning", "Window sill cleaning"]
+    },
+    {
+      "icon": "🧽",
+      "iconKey": "spray",
+      "images": ["/services/window-interior.jpg", "/services/window-int-2.jpg", "/services/window-int-3.jpg"],
+      "title": "Interior Window Cleaning",
+      "price": "Starting at $150",
+      "description": "Professional window-cleaning soap and squeegee techniques for a high-quality finish and crystal-clear visibility.",
+      "includes": ["Interior glass cleaning", "Window frame cleaning", "Window sill cleaning"]
+    },
+    {
+      "icon": "🏠",
+      "iconKey": "roof",
+      "images": ["/services/roof-zinc.jpg", "/services/roof-zinc-2.jpg", "/services/roof-valley.jpg"],
+      "title": "Roof Cleaning — Zinc Treatment",
+      "price": "Starting at $275",
+      "description": "Thorough moss removal followed by a zinc application that helps prevent future moss growth.",
+      "includes": ["Moss removal with deck brush", "Roof & gutter blowing", "Debris collection & cleanup", "Zinc application"]
+    },
+    {
+      "icon": "💧",
+      "iconKey": "droplet",
+      "images": ["/services/roof-softwash.jpg", "/services/roof-valley.jpg"],
+      "title": "Roof Cleaning — Soft Wash",
+      "price": "Starting at $299",
+      "description": "Low-pressure soft wash with a chlorine and soap solution that kills moss right at the root.",
+      "includes": ["Moss removal with deck brush", "Roof cleanup", "Low-pressure soft wash", "Chlorine & soap treatment"]
+    },
+    {
+      "icon": "🍂",
+      "iconKey": "leaf",
+      "images": ["/services/gutter.jpg", "/services/gutter-2.jpg", "/services/roof-valley.jpg"],
+      "title": "Gutter Cleaning",
+      "price": "Starting at $120",
+      "description": "Clear out leaves and debris so your gutters drain properly and protect your home year-round.",
+      "includes": ["Leaf & debris removal", "Gutter cleaning with blower", "Downspout flushing when needed"]
+    },
+    {
+      "icon": "☀️",
+      "iconKey": "solar",
+      "images": [],
+      "title": "Solar Panel Cleaning",
+      "price": "Free Quote",
+      "description": "Soft brushes, Water Fed Pole system and deionized water safely clean your panels without causing damage — keeping them efficient.",
+      "includes": ["Soft brush technology", "Water Fed Pole system", "Deionized water"]
+    },
+    {
+      "icon": "🔆",
+      "iconKey": "sun",
+      "images": ["/services/skylight.jpg", "/services/skylight-2.jpg", "/services/skylight-3.jpg"],
+      "title": "Skylight Cleaning",
+      "price": "Free Quote",
+      "description": "Safe and effective cleaning that restores natural light without damaging the skylight surface.",
+      "includes": ["Water Fed Pole system", "Soft brush technology", "Deionized water"]
+    },
+    {
+      "icon": "🎄",
+      "iconKey": "lights",
+      "images": [],
+      "title": "Holiday Lighting",
+      "price": "Custom Quote",
+      "description": "Custom Christmas light design, professional installation, seasonal upkeep, and takedown after the holidays.",
+      "includes": ["Custom lighting design", "Professional installation", "Seasonal maintenance", "Takedown & removal"]
+    }
+  ],
+  "experience": {
+    "eyebrow": "Why LumaPeak",
+    "title": "Reliable. Professional. Guaranteed.",
+    "body": "We treat every home like our own. From deionized-water window systems to safe, low-pressure roof washing, our team delivers spotless results with clear communication from quote to cleanup.",
+    "points": [
+      "Licensed & fully insured",
+      "Professional deionized-water equipment",
+      "Same-day response to inquiries",
+      "100% satisfaction guarantee"
+    ]
+  },
+  "work": {
+    "eyebrow": "Recent Work",
+    "title": "Results That Last",
+    "subtitle": "A glimpse of the homes we've helped shine across the Greater Seattle area.",
+    "items": [
+      { "tag": "Windows", "title": "Exterior Window Cleaning", "place": "Bellevue, WA" },
+      { "tag": "Roof", "title": "Roof Soft Wash", "place": "Renton, WA" },
+      { "tag": "Gutters", "title": "Gutter Clean-Out", "place": "Kirkland, WA" },
+      { "tag": "Lighting", "title": "Holiday Light Install", "place": "Sammamish, WA" }
+    ]
+  },
+  "trust": {
+    "title": "Why Homeowners Trust LumaPeak",
+    "subtitle": "Reliable, professional service backed by real guarantees.",
+    "items": [
+      { "icon": "📋", "title": "Licensed", "text": "Fully licensed to operate in Washington." },
+      { "icon": "🛡️", "title": "Insured", "text": "Comprehensive insurance for your peace of mind." },
+      { "icon": "✅", "title": "100% Satisfaction Guaranteed", "text": "We're not happy until you are." },
+      { "icon": "🏡", "title": "Residential Properties Only", "text": "Focused expertise on homes like yours." },
+      { "icon": "🧰", "title": "Professional Equipment", "text": "Deionized water & Water Fed Pole systems." },
+      { "icon": "📞", "title": "Reliable & Responsive", "text": "We typically respond the same day." }
+    ]
+  },
+  "areas": {
+    "title": "Service Areas",
+    "subtitle": "Proudly serving homeowners throughout the Greater Seattle area.",
+    "center": { "name": "Seattle, WA", "lat": 47.6062, "lng": -122.3321 },
+    "radiusMiles": 25,
+    "cities": [
+      { "name": "Seattle, WA", "lat": 47.6062, "lng": -122.3321 },
+      { "name": "Bellevue, WA", "lat": 47.6101, "lng": -122.2015 },
+      { "name": "Kirkland, WA", "lat": 47.6769, "lng": -122.2060 },
+      { "name": "Renton, WA", "lat": 47.4829, "lng": -122.2171 },
+      { "name": "Burien, WA", "lat": 47.4704, "lng": -122.3468 },
+      { "name": "Bothell, WA", "lat": 47.7623, "lng": -122.2054 },
+      { "name": "Issaquah, WA", "lat": 47.5301, "lng": -122.0326 },
+      { "name": "Redmond, WA", "lat": 47.6740, "lng": -122.1215 },
+      { "name": "Sammamish, WA", "lat": 47.6163, "lng": -122.0356 },
+      { "name": "Mercer Island, WA", "lat": 47.5707, "lng": -122.2221 },
+      { "name": "Shoreline, WA", "lat": 47.7557, "lng": -122.3415 },
+      { "name": "Newcastle, WA", "lat": 47.5390, "lng": -122.1565 }
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Testimonials",
+    "title": "What Our Clients Say",
+    "subtitle": "Real reviews from homeowners across the Greater Seattle area.",
+    "googleCid": "14883304910954012324",
+    "googleUrl": "https://www.google.com/maps?cid=14883304910954012324",
+    "featurableWidgetId": "95eb8d1e-7246-409b-be53-f35c3b0d5506",
+    "rating": 5.0,
+    "count": 6,
+    "items": [
+      {
+        "name": "Jennifer M.",
+        "rating": 5,
+        "date": "2 weeks ago",
+        "text": "LumaPeak did an incredible job on our windows and gutters. The team was punctual, professional, and left everything spotless. Our home looks brand new!",
+        "avatar": ""
+      },
+      {
+        "name": "David R.",
+        "rating": 5,
+        "date": "1 month ago",
+        "text": "Best exterior cleaning service in the Seattle area. They soft-washed our roof and it looks amazing. Fair pricing and great communication throughout.",
+        "avatar": ""
+      },
+      {
+        "name": "Sarah T.",
+        "rating": 5,
+        "date": "1 month ago",
+        "text": "Highly recommend! They cleaned our solar panels and skylights and were so careful with everything. You can tell they really take pride in their work.",
+        "avatar": ""
+      },
+      {
+        "name": "Michael B.",
+        "rating": 5,
+        "date": "2 months ago",
+        "text": "Responsive, on time, and the results speak for themselves. Our windows have never been this clear. Will absolutely be using them again every season.",
+        "avatar": ""
+      },
+      {
+        "name": "Emily K.",
+        "rating": 5,
+        "date": "3 months ago",
+        "text": "From the free quote to the finished job, everything was seamless. Friendly crew, great attention to detail, and a noticeable difference on our home's curb appeal.",
+        "avatar": ""
+      },
+      {
+        "name": "Carlos V.",
+        "rating": 5,
+        "date": "3 months ago",
+        "text": "They handled our holiday lighting installation and it turned out beautiful. Licensed, insured, and genuinely nice people to work with. Five stars!",
+        "avatar": ""
+      }
+    ]
+  },
+  "about": {
+    "title": "About LumaPeak Services",
+    "intro": "LumaPeak Services is a residential exterior cleaning company serving homeowners throughout the Greater Seattle area.",
+    "body": "We specialize in professional window cleaning, roof cleaning, gutter cleaning, solar panel cleaning, skylight cleaning, and holiday lighting installation. Our focus is on high-quality workmanship, excellent customer service, and reliable communication — helping homeowners improve and maintain the appearance of their properties."
+  },
+  "quote": {
+    "title": "Request a Free Estimate",
+    "subtitle": "Tell us about your project and we'll get back to you the same day.",
+    "web3formsKey": "8fff486a-9498-4840-90ea-304a4377f331",
+    "serviceOptions": [
+      "Exterior Window Cleaning",
+      "Interior Window Cleaning",
+      "Roof Cleaning — Zinc Treatment",
+      "Roof Cleaning — Soft Wash",
+      "Gutter Cleaning",
+      "Solar Panel Cleaning",
+      "Skylight Cleaning",
+      "Holiday Lighting",
+      "Other / Not sure"
+    ]
+  },
+  "videos": {
+    "eyebrow": "See Us In Action",
+    "title": "Real Work, Real Results",
+    "subtitle": "A look at our team delivering spotless results across the Greater Seattle area.",
+    "items": [
+      { "src": "/videos/reel-1.mp4", "poster": "/videos/reel-1.jpg", "tag": "Windows", "title": "Exterior Window Cleaning" },
+      { "src": "/videos/reel-2.mp4", "poster": "/videos/reel-2.jpg", "tag": "Windows", "title": "Water-Fed Pole System" },
+      { "src": "/videos/reel-3.mp4", "poster": "/videos/reel-3.jpg", "tag": "Roof", "title": "Roof Cleaning" },
+      { "src": "/videos/reel-4.mp4", "poster": "/videos/reel-4.jpg", "tag": "Gutters", "title": "Gutter Clean-Out" },
+      { "src": "/videos/reel-5.mp4", "poster": "/videos/reel-5.jpg", "tag": "Windows", "title": "Spotless Finish" },
+      { "src": "/videos/reel-6.mp4", "poster": "/videos/reel-6.jpg", "tag": "Windows", "title": "Reaching High Windows" },
+      { "src": "/videos/reel-7.mp4", "poster": "/videos/reel-7.jpg", "tag": "Skylight", "title": "Skylight Cleaning" },
+      { "src": "/videos/reel-8.mp4", "poster": "/videos/reel-8.jpg", "tag": "Windows", "title": "Interior Window Cleaning" },
+      { "src": "/videos/reel-9.mp4", "poster": "/videos/reel-9.jpg", "tag": "Detail", "title": "Crystal-Clear Finish" }
+    ]
+  },
+  "legal": {
+    "terms": {
+      "title": "Terms & Conditions",
+      "effective": "Effective date: June 2026",
+      "sections": [
+        { "heading": "Acceptance of Terms", "body": ["By requesting a quote, scheduling a service, or using this website, you agree to these Terms & Conditions."] },
+        { "heading": "Services", "body": ["LumaPeak Services provides residential exterior cleaning — including window, roof, gutter, solar panel and skylight cleaning, and holiday lighting — within the Greater Seattle area. We service residential properties only."] },
+        { "heading": "Quotes & Pricing", "body": ["All prices and \"starting at\" figures are estimates. Final pricing depends on property size, accessibility, roof condition and project scope, and is confirmed before work begins."] },
+        { "heading": "Scheduling & Property Access", "body": ["You agree to provide safe, reasonable access to the property and to disclose any known hazards. We are not responsible for delays caused by inaccessible areas, pets, or unsafe conditions."] },
+        { "heading": "Payment", "body": ["Payment is due upon completion of the service unless otherwise agreed in writing. We accept the payment methods communicated at the time of booking."] },
+        { "heading": "Cancellations & Rescheduling", "body": ["Please give at least 24 hours' notice to cancel or reschedule. Repeated last-minute cancellations may be subject to a fee."] },
+        { "heading": "Weather", "body": ["For safety and quality, services may be rescheduled due to weather conditions such as rain, ice or high winds."] },
+        { "heading": "Satisfaction Guarantee", "body": ["We stand behind our work. If you are not satisfied, contact us within 48 hours of service and we will make it right."] },
+        { "heading": "Liability", "body": ["We are licensed and insured and take care to protect your property. However, we are not liable for pre-existing damage, faulty or aged materials, or conditions beyond our reasonable control. Our total liability is limited to the amount paid for the affected service."] },
+        { "heading": "Governing Law", "body": ["These Terms are governed by the laws of the State of Washington, USA."] },
+        { "heading": "Changes to These Terms", "body": ["We may update these Terms at any time. Continued use of our services constitutes acceptance of the current Terms."] },
+        { "heading": "Contact", "body": ["Questions? Contact us at lumapeakservices@gmail.com or 425-922-4918."] }
+      ]
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "effective": "Effective date: June 2026",
+      "sections": [
+        { "heading": "Overview", "body": ["This Privacy Policy explains how LumaPeak Services collects, uses and protects your personal information."] },
+        { "heading": "Information We Collect", "body": ["We collect information you provide directly — such as your name, phone number, email address and property address — when you request a quote, contact us, or book a service."] },
+        { "heading": "How We Use Your Information", "body": ["We use your information to respond to inquiries, prepare quotes, schedule and perform services, process payments, and communicate with you about your project."] },
+        { "heading": "Text Messaging (SMS)", "body": ["If you contact us or opt in by text, you consent to receive SMS messages related to your inquiry and service. Message and data rates may apply. You can opt out at any time by replying STOP."] },
+        { "heading": "Sharing of Information", "body": ["We do not sell your personal information. We share it only with service providers who help us operate our business (such as scheduling or payment processing) and when required by law."] },
+        { "heading": "Data Retention", "body": ["We keep your information only as long as needed to provide our services and to meet legal or accounting obligations."] },
+        { "heading": "Data Security", "body": ["We use reasonable measures to protect your information, but no method of transmission or storage is 100% secure."] },
+        { "heading": "Your Rights", "body": ["You may request to access, correct or delete your personal information by contacting us."] },
+        { "heading": "Cookies & Website", "body": ["Our website may use basic cookies or analytics to improve your experience. You can control cookies through your browser settings."] },
+        { "heading": "Children's Privacy", "body": ["Our services are intended for adults. We do not knowingly collect information from children under 13."] },
+        { "heading": "Changes to This Policy", "body": ["We may update this Privacy Policy periodically. The latest version will always be available on this website."] },
+        { "heading": "Contact", "body": ["For privacy questions, contact us at lumapeakservices@gmail.com or 425-922-4918."] }
+      ]
+    }
+  }
+}

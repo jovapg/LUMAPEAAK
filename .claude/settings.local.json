@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(cd \"c:/Users/jovposga/Desktop/empresa-web\" && echo \"=== tmp-convert ===\" && ls -la tmp-convert/ 2>/dev/null; echo \"=== Downloads \\(recent images\\) ===\" && ls -lt \"C:/Users/jovposga/Downloads/\" 2>/dev/null | head -15)",
+      "Read(//c/Users/jovposga/Downloads/**)",
+      "Bash(cd \"c:/Users/jovposga/Desktop/empresa-web\" && cp public/logo.png public/logo-old-backup.png && cp \"C:/Users/jovposga/Downloads/logo transparente.jpeg\" tmp-convert/logo-src.jpeg && echo \"backup + copy done\")",
+      "Bash(node tmp-convert/whitekey.mjs)",
+      "Bash(node tmp-convert/preview.mjs)",
+      "Bash(npm install *)",
+      "Bash(node -e \"const hex='0xce8c1ef61d3d9ea4'; console.log\\('CID decimal:', BigInt\\(hex\\).toString\\(\\)\\);\")",
+      "WebSearch",
+      "WebFetch(domain:featurable.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:web3forms.com)",
+      "WebFetch(domain:docs.web3forms.com)",
+      "Bash(tail -3 \"C:\\\\Users\\\\jovposga\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-jovposga-Desktop-empresa-web\\\\a5892020-0f04-4651-9902-d3c3d2f980a6\\\\tasks\\\\b6meoh2fj.output\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(curl -s \"https://featurable.com/api/v1/widgets/95eb8d1e-7246-409b-be53-f35c3b0d5506\")",
+      "WebFetch(domain:api.featurable.com)",
+      "Bash(git --version)",
+      "Bash(echo \"git: $\\(git --version || echo NO\\)\")",
+      "Bash(gh --version)",
+      "Bash(echo \"gh: $\\(gh --version)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\jovposga\\Downloads"
+    ]
+  }
+}
