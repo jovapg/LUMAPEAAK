@@ -22,6 +22,8 @@ function selectService(i) {
   selectedIndex.value = i
   galleryIndex.value = 0
 }
+function prevService() { selectService((selectedIndex.value - 1 + services.length) % services.length) }
+function nextService() { selectService((selectedIndex.value + 1) % services.length) }
 
 const galleryIndex = ref(0)
 let galleryTimer
@@ -156,25 +158,31 @@ async function submitQuote() {
   <!-- ===== SERVICES (interactive selector) ===== -->
   <section id="services" class="services-x seccion--dark">
     <!-- auto-scrolling card marquee (overlaps the hero) -->
-    <div
-      class="svc-marquee"
-      @mouseenter="marqueePaused = true"
-      @mouseleave="marqueePaused = false"
-    >
-      <div class="svc-marquee__track" :class="{ 'is-paused': marqueePaused }">
-        <button
-          v-for="(s, i) in marqueeServices"
-          :key="i"
-          type="button"
-          class="svc-chip"
-          :class="{ 'is-active': (i % services.length) === selectedIndex }"
-          @click="selectService(i % services.length)"
-        >
-          <span class="svc-chip__icon"><ServiceIcon :name="s.iconKey" /></span>
-          <span class="svc-chip__title">{{ s.title }}</span>
-          <span class="svc-chip__price">{{ s.price }}</span>
-        </button>
+    <div class="svc-marquee-wrap">
+      <button class="svc-nav svc-nav--prev" type="button" aria-label="Previous service" @click="prevService">‹</button>
+
+      <div
+        class="svc-marquee"
+        @mouseenter="marqueePaused = true"
+        @mouseleave="marqueePaused = false"
+      >
+        <div class="svc-marquee__track" :class="{ 'is-paused': marqueePaused }">
+          <button
+            v-for="(s, i) in marqueeServices"
+            :key="i"
+            type="button"
+            class="svc-chip"
+            :class="{ 'is-active': (i % services.length) === selectedIndex }"
+            @click="selectService(i % services.length)"
+          >
+            <span class="svc-chip__icon"><ServiceIcon :name="s.iconKey" /></span>
+            <span class="svc-chip__title">{{ s.title }}</span>
+            <span class="svc-chip__price">{{ s.price }}</span>
+          </button>
+        </div>
       </div>
+
+      <button class="svc-nav svc-nav--next" type="button" aria-label="Next service" @click="nextService">›</button>
     </div>
 
     <!-- white detail panel for the selected service -->
@@ -540,15 +548,39 @@ section .center-head { margin-bottom: 56px; }
 .svc-head__sub { color: var(--color-dark-texto); font-size: 0.92rem; }
 
 /* auto-scrolling marquee — pulled up to overlap the hero circle */
-.svc-marquee {
+.svc-marquee-wrap {
   position: relative;
   z-index: 10;
   margin: -150px 0 4px;
+}
+.svc-marquee {
+  position: relative;
   overflow: hidden;
   padding: 6px 0;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
+/* circular nav arrows (same style as the video showcase) */
+.svc-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 15;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--color-dark-borde);
+  background: rgba(10, 24, 32, 0.7);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 1.7rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transicion);
+}
+.svc-nav:hover { background: var(--color-acento); border-color: var(--color-acento); transform: translateY(-50%) scale(1.08); }
+.svc-nav--prev { left: 8px; }
+.svc-nav--next { right: 8px; }
 .svc-marquee__track {
   display: flex;
   gap: 18px;
@@ -952,7 +984,7 @@ a.qcontact:hover { border-color: var(--color-acento); background: rgba(89, 173, 
   .svc-detail { grid-template-columns: 1fr; }
   .svc-detail__gallery { min-height: 280px; }
   /* no hero overlap when stacked */
-  .svc-marquee { margin-top: 28px; }
+  .svc-marquee-wrap { margin-top: 28px; }
 }
 @media (max-width: 600px) {
   .hero { min-height: 78vh; padding: 56px 0; }
