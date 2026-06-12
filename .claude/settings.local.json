@@ -21,7 +21,14 @@
       "Bash(git --version)",
       "Bash(echo \"git: $\\(git --version || echo NO\\)\")",
       "Bash(gh --version)",
-      "Bash(echo \"gh: $\\(gh --version)"
+      "Bash(echo \"gh: $\\(gh --version)",
+      "Bash(git config *)",
+      "Bash(git commit -q -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "WebFetch(domain:lumapeak-services.netlify.app)",
+      "Bash(git rm *)",
+      "Bash(git add *)"
     ],
     "additionalDirectories": [
       "C:\\Users\\jovposga\\Downloads"

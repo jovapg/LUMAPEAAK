@@ -5,7 +5,7 @@ import ServiceIcon from '../components/ServiceIcon.vue'
 import ServiceAreaMap from '../components/ServiceAreaMap.vue'
 import ReviewsCarousel from '../components/ReviewsCarousel.vue'
 import content from '../data/content.json'
-const { home, company, services, experience, areas, about, trust, quote } = content
+const { home, company, services, experience, areas, about, trust, quote, faq } = content
 
 /* ---- Hero rotating circle ---- */
 const heroImages = home.heroImages || []
@@ -27,7 +27,9 @@ const galleryIndex = ref(0)
 let galleryTimer
 watch(selectedIndex, () => { galleryIndex.value = 0 })
 
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 onMounted(() => {
+  if (reduceMotion) return // respect users who prefer no auto-animation
   if (heroImages.length > 1) {
     heroTimer = setInterval(() => {
       heroIndex.value = (heroIndex.value + 1) % heroImages.length
@@ -192,6 +194,8 @@ async function submitQuote() {
               class="svc-detail__photo"
               :class="{ 'is-active': gi === galleryIndex }"
               :alt="selected.title"
+              loading="lazy"
+              decoding="async"
             />
           </template>
           <div v-else class="svc-detail__empty"><ServiceIcon :name="selected.iconKey" /></div>
@@ -281,13 +285,35 @@ async function submitQuote() {
         <a href="#services" class="btn btn--verde">See Our Services</a>
       </div>
       <div class="exp__img">
-        <img src="/hero/hero-2.jpg" :alt="`${company.name} team at work`" />
+        <img src="/hero/hero-2.jpg" :alt="`${company.name} team at work`" loading="lazy" decoding="async" />
       </div>
     </div>
   </section>
 
   <!-- ===== REVIEWS ===== -->
   <ReviewsCarousel />
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="seccion seccion--dark faq-sec">
+    <div class="contenedor faq">
+      <div class="center-head">
+        <span class="eyebrow">{{ faq.eyebrow }}</span>
+        <h2 class="titulo-seccion">{{ faq.title }}</h2>
+        <p class="subtitulo-seccion">{{ faq.subtitle }}</p>
+      </div>
+      <ul class="faq__list">
+        <li v-for="(item, i) in faq.items" :key="i" class="faq__item">
+          <details class="faq__details">
+            <summary class="faq__q">
+              <span>{{ item.q }}</span>
+              <span class="faq__icon" aria-hidden="true"></span>
+            </summary>
+            <p class="faq__a">{{ item.a }}</p>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <!-- ===== QUOTE FORM ===== -->
   <section id="quote" class="seccion seccion--dark quote-sec">
@@ -758,6 +784,52 @@ section .center-head { margin-bottom: 56px; }
 .tcard__text p { color: var(--color-dark-texto); font-size: 0.92rem; line-height: 1.5; }
 
 /* ---------- CTA BANNER ---------- */
+
+/* ---------- FAQ (accordion) ---------- */
+.faq__list { max-width: 760px; margin: 0 auto; display: grid; gap: 14px; }
+.faq__details {
+  background: var(--color-dark-2);
+  border: 1px solid var(--color-dark-borde);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+.faq__details[open] {
+  border-color: rgba(89, 173, 71, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+.faq__q {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  font-weight: 600;
+  font-size: 1.04rem;
+  color: #fff;
+}
+.faq__q::-webkit-details-marker { display: none; }
+.faq__icon { position: relative; flex-shrink: 0; width: 20px; height: 20px; }
+.faq__icon::before,
+.faq__icon::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  background: var(--color-acento);
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+.faq__icon::before { width: 14px; height: 2px; }
+.faq__icon::after { width: 2px; height: 14px; transition: transform var(--transicion); }
+.faq__details[open] .faq__icon::after { transform: translate(-50%, -50%) scaleY(0); }
+.faq__a {
+  padding: 0 22px 20px;
+  color: var(--color-dark-texto);
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
 
 /* ---------- QUOTE FORM (professional) ---------- */
 .quote-sec { position: relative; overflow: hidden; }

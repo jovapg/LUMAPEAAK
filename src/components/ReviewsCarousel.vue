@@ -53,6 +53,7 @@ const prev = () => { rotateBackward(); start() }
 
 function start() {
   stop()
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
   timer = setInterval(rotateForward, 3000)
 }
 function stop() {
@@ -191,7 +192,7 @@ function avatarColor(name) {
                 </div>
                 <p class="rev-card__text">{{ reviewAt(itemIdx).text }}</p>
                 <div class="rev-card__person">
-                  <img v-if="reviewAt(itemIdx).avatar" :src="reviewAt(itemIdx).avatar" :alt="reviewAt(itemIdx).name" class="rev-card__avatar" referrerpolicy="no-referrer" />
+                  <img v-if="reviewAt(itemIdx).avatar" :src="reviewAt(itemIdx).avatar" :alt="reviewAt(itemIdx).name" class="rev-card__avatar" referrerpolicy="no-referrer" loading="lazy" decoding="async" />
                   <span
                     v-else
                     class="rev-card__avatar rev-card__avatar--initials"

@@ -31,7 +31,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
   <footer class="footer">
     <div class="contenedor footer__grid">
       <div class="footer__brand">
-        <img class="footer__logo-img" src="/logo-full.png" :alt="company.name" />
+        <img class="footer__logo-img" src="/logo-full.png" :alt="company.name" loading="lazy" decoding="async" />
         <p class="footer__slogan">{{ company.slogan }}</p>
         <div class="footer__socials">
           <a v-for="s in company.socials" :key="s.name" :href="s.url" target="_blank" rel="noopener">

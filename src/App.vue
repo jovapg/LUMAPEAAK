@@ -8,8 +8,9 @@ const smsHref = `sms:${company.phoneLink}?body=${encodeURIComponent("Hi LumaPeak
 
 <template>
   <div class="shell">
+    <a href="#main" class="skip-link">Skip to content</a>
     <NavBar />
-    <main>
+    <main id="main" tabindex="-1">
       <router-view v-slot="{ Component }">
         <transition name="page" mode="out-in">
           <component :is="Component" />
@@ -17,6 +18,12 @@ const smsHref = `sms:${company.phoneLink}?body=${encodeURIComponent("Hi LumaPeak
       </router-view>
     </main>
     <AppFooter />
+  </div>
+
+  <!-- Sticky mobile call-to-action bar -->
+  <div class="mobile-cta">
+    <a :href="`tel:${company.phoneLink}`" class="mobile-cta__btn mobile-cta__call">📞 Call Now</a>
+    <a href="#quote" class="mobile-cta__btn mobile-cta__quote">Free Quote</a>
   </div>
 
   <!-- Floating SMS button (US customers prefer texting) -->
@@ -91,8 +98,47 @@ const smsHref = `sms:${company.phoneLink}?body=${encodeURIComponent("Hi LumaPeak
   50% { box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4), 0 0 0 12px rgba(89, 173, 71, 0); }
 }
 
+/* ---------- Sticky mobile CTA bar ---------- */
+.mobile-cta { display: none; }
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1500;
+    gap: 10px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(10, 24, 32, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--color-dark-borde);
+  }
+  .mobile-cta__btn {
+    flex: 1;
+    text-align: center;
+    padding: 13px 10px;
+    border-radius: 10px;
+    font-family: var(--fuente-display);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  .mobile-cta__call {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid var(--color-dark-borde);
+  }
+  .mobile-cta__quote {
+    background: var(--color-acento);
+    color: #fff;
+    box-shadow: 0 8px 20px rgba(89, 173, 71, 0.3);
+  }
+}
+
 @media (max-width: 600px) {
-  .sms-fab { left: 14px; top: auto; bottom: 20px; height: 52px; width: 52px; }
+  .sms-fab { left: 14px; top: auto; bottom: 84px; height: 52px; width: 52px; }
   .sms-fab__icon { flex-basis: 52px; }
   .sms-fab:hover { width: 52px; }
   .sms-fab:hover .sms-fab__label { opacity: 0; }

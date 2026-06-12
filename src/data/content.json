@@ -214,6 +214,37 @@
     "intro": "LumaPeak Services is a residential exterior cleaning company serving homeowners throughout the Greater Seattle area.",
     "body": "We specialize in professional window cleaning, roof cleaning, gutter cleaning, solar panel cleaning, skylight cleaning, and holiday lighting installation. Our focus is on high-quality workmanship, excellent customer service, and reliable communication — helping homeowners improve and maintain the appearance of their properties."
   },
+  "faq": {
+    "eyebrow": "Good to Know",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before booking your exterior cleaning.",
+    "items": [
+      {
+        "q": "Are you licensed and insured?",
+        "a": "Yes. LumaPeak Services is fully licensed and insured, so your home and our team are protected on every job."
+      },
+      {
+        "q": "How do I get a quote, and is it free?",
+        "a": "Just fill out the quote form on this page or give us a call. Estimates are always free and with no obligation — we typically respond the same day."
+      },
+      {
+        "q": "What areas do you serve?",
+        "a": "We serve homeowners throughout the Greater Seattle area, generally within about 25 miles of Seattle. If your city isn't listed on our map, call us to verify availability."
+      },
+      {
+        "q": "Is your roof cleaning safe for my roof?",
+        "a": "Absolutely. We use a gentle low-pressure soft-wash method (and zinc treatments when appropriate) that safely removes moss and algae without damaging your shingles."
+      },
+      {
+        "q": "Do I need to be home during the service?",
+        "a": "Not necessarily. As long as our team has access to the areas being cleaned, you don't have to be present. We'll keep you updated throughout the job."
+      },
+      {
+        "q": "How do you price your services?",
+        "a": "Pricing depends on the size of your home and the scope of the work. We'll give you a clear, upfront estimate before any work begins — no surprises."
+      }
+    ]
+  },
   "quote": {
     "title": "Request a Free Estimate",
     "subtitle": "Tell us about your project and we'll get back to you the same day.",
