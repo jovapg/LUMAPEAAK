@@ -4,6 +4,7 @@ import VideoShowcase from '../components/VideoShowcase.vue'
 import ServiceIcon from '../components/ServiceIcon.vue'
 import ServiceAreaMap from '../components/ServiceAreaMap.vue'
 import ReviewsCarousel from '../components/ReviewsCarousel.vue'
+import BeforeAfterGallery from '../components/BeforeAfterGallery.vue'
 import content from '../data/content.json'
 const { home, company, services, experience, areas, about, trust, quote, faq } = content
 
@@ -233,6 +234,9 @@ async function submitQuote() {
       </div>
     </div>
   </section>
+
+  <!-- ===== BEFORE & AFTER GALLERY ===== -->
+  <BeforeAfterGallery />
 
   <!-- ===== VIDEO SHOWCASE ===== -->
   <VideoShowcase />

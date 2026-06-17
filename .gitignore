@@ -19,3 +19,8 @@ Thumbs.db
 .env
 .env.local
 .env.*.local
+
+# internal handover docs (keep out of the public repo)
+HANDOVER.md
+HANDOVER.html
+LumaPeak-Website-Handover.pdf

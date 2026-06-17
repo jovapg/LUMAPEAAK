@@ -76,9 +76,9 @@
     {
       "icon": "☀️",
       "iconKey": "solar",
-      "images": [],
+      "images": ["/services/solar-panel.jpg"],
       "title": "Solar Panel Cleaning",
-      "price": "Free Quote",
+      "price": "Starting at $150",
       "description": "Soft brushes, Water Fed Pole system and deionized water safely clean your panels without causing damage — keeping them efficient.",
       "includes": ["Soft brush technology", "Water Fed Pole system", "Deionized water"]
     },
@@ -101,6 +101,19 @@
       "includes": ["Custom lighting design", "Professional installation", "Seasonal maintenance", "Takedown & removal"]
     }
   ],
+  "beforeAfter": {
+    "eyebrow": "Real Results",
+    "title": "Before & After",
+    "subtitle": "See the difference for yourself — real LumaPeak jobs across the Greater Seattle area.",
+    "items": [
+      "/before-after/ba-1.jpg",
+      "/before-after/ba-2.jpg",
+      "/before-after/ba-3.jpg",
+      "/before-after/ba-4.jpg",
+      "/before-after/ba-5.jpg",
+      "/before-after/ba-6.jpg"
+    ]
+  },
   "experience": {
     "eyebrow": "Why LumaPeak",
     "title": "Reliable. Professional. Guaranteed.",

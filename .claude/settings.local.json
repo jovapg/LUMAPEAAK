@@ -28,7 +28,10 @@
       "Bash(git push *)",
       "WebFetch(domain:lumapeak-services.netlify.app)",
       "Bash(git rm *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(pandoc --version)",
+      "Bash(echo \"pandoc: $\\(pandoc --version)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=\"C:\\\\Users\\\\jovposga\\\\Desktop\\\\empresa-web\\\\LumaPeak-Website-Handover.pdf\" \"file:///C:/Users/jovposga/Desktop/empresa-web/HANDOVER.html\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\jovposga\\Downloads"
