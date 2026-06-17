@@ -142,7 +142,7 @@ if (import.meta.hot) import.meta.hot.dispose(() => cancelAnimationFrame(raf))
   max-width: 1240px;
   height: 410px;
   perspective: 1300px;
-  transform-style: preserve-3d;
+  /* flat (not preserve-3d) so z-index stacking + hover hit-testing are reliable */
 }
 .ba__card {
   position: absolute;
