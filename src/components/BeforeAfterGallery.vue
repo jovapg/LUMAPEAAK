@@ -12,6 +12,7 @@ const activeDot = ref(0)
 let pos = 0        // current continuous position
 let target = 0     // where we're easing toward
 let hovered = -1
+let hoverAmt = new Array(n).fill(0) // eased 0..1 per card for smooth zoom
 let paused = false
 let raf = 0
 const AUTO = 0.0045 // slow continuous drift (cards per frame)
@@ -42,17 +43,16 @@ function layout() {
       card.style.transform = 'translateX(-50%) scale(0.4)'
       continue
     }
-    const isHover = i === hovered
+    const h = hoverAmt[i] // 0..1
     const spacing = 200
-    let scale = 1 - abs * 0.04
-    let extraZ = 0
-    if (isHover) { scale += 0.16; extraZ = 110 }
-    const rotY = isHover ? 0 : -o * 20
+    const scale = (1 - abs * 0.04) + h * 0.38       // grows noticeably on hover
+    const extraZ = h * 160
+    const rotY = -o * 20 * (1 - h)                   // straighten as it grows
     const tz = -abs * 110 + extraZ
-    const ty = isHover ? 0 : abs * 26
+    const ty = abs * 26 * (1 - h)
     card.style.opacity = abs > 2.6 ? String(1 - (abs - 2.6) / 0.6) : '1'
     card.style.pointerEvents = 'auto'
-    card.style.zIndex = isHover ? '60' : String(30 - Math.round(abs))
+    card.style.zIndex = h > 0.4 ? '60' : String(30 - Math.round(abs))
     card.style.transform =
       `translateX(calc(-50% + ${o * spacing}px)) translateY(${ty}px) translateZ(${tz}px) rotateY(${rotY}deg) scale(${scale})`
   }
@@ -61,6 +61,9 @@ function layout() {
 function frame() {
   if (!paused && !reduce && hovered === -1) target += AUTO
   pos += (target - pos) * 0.09
+  for (let i = 0; i < n; i++) {
+    hoverAmt[i] += ((i === hovered ? 1 : 0) - hoverAmt[i]) * 0.18
+  }
   if (pos > n) { pos -= n; target -= n }
   if (pos < -n) { pos += n; target += n }
   const a = ((Math.round(pos) % n) + n) % n
@@ -71,6 +74,9 @@ function frame() {
 
 onMounted(() => { layout(); raf = requestAnimationFrame(frame) })
 onBeforeUnmount(() => cancelAnimationFrame(raf))
+// stop the animation loop cleanly on hot-reload (otherwise a stale loop keeps
+// overwriting the transforms and hover appears to do nothing)
+if (import.meta.hot) import.meta.hot.dispose(() => cancelAnimationFrame(raf))
 </script>
 
 <template>

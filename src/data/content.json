@@ -40,7 +40,7 @@
     {
       "icon": "🧽",
       "iconKey": "spray",
-      "images": ["/services/window-interior.jpg", "/services/window-int-2.jpg", "/services/window-int-3.jpg"],
+      "images": ["/services/window-interior.jpg"],
       "title": "Interior Window Cleaning",
       "price": "Starting at $150",
       "description": "Professional window-cleaning soap and squeegee techniques for a high-quality finish and crystal-clear visibility.",
@@ -67,7 +67,7 @@
     {
       "icon": "🍂",
       "iconKey": "leaf",
-      "images": ["/services/gutter.jpg", "/services/gutter-2.jpg", "/services/roof-valley.jpg"],
+      "images": ["/services/gutter-new-1.jpg", "/services/gutter-new-2.jpg"],
       "title": "Gutter Cleaning",
       "price": "Starting at $120",
       "description": "Clear out leaves and debris so your gutters drain properly and protect your home year-round.",
@@ -85,16 +85,16 @@
     {
       "icon": "🔆",
       "iconKey": "sun",
-      "images": ["/services/skylight.jpg", "/services/skylight-2.jpg", "/services/skylight-3.jpg"],
+      "images": ["/services/skylight.jpg"],
       "title": "Skylight Cleaning",
-      "price": "Free Quote",
+      "price": "$25 each",
       "description": "Safe and effective cleaning that restores natural light without damaging the skylight surface.",
       "includes": ["Water Fed Pole system", "Soft brush technology", "Deionized water"]
     },
     {
       "icon": "🎄",
       "iconKey": "lights",
-      "images": [],
+      "images": ["/services/holiday-1.jpg", "/services/holiday-2.jpg"],
       "title": "Holiday Lighting",
       "price": "Custom Quote",
       "description": "Custom Christmas light design, professional installation, seasonal upkeep, and takedown after the holidays.",

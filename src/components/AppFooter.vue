@@ -4,17 +4,6 @@ import content from '../data/content.json'
 const { company, services, legal } = content
 const year = 2026
 
-const email = ref('')
-const subscribed = ref(false)
-function subscribe() {
-  if (!email.value) return
-  const subject = 'Newsletter signup'
-  const body = `Please add me to your list: ${email.value}`
-  window.location.href =
-    `mailto:${company.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  subscribed.value = true
-}
-
 /* ---- Legal modals ---- */
 const openModal = ref(null) // 'terms' | 'privacy' | null
 const current = computed(() => (openModal.value ? legal[openModal.value] : null))
@@ -43,7 +32,7 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
       <div class="footer__col">
         <h4>Services</h4>
         <ul>
-          <li v-for="s in services.slice(0, 6)" :key="s.title">
+          <li v-for="s in services" :key="s.title">
             <a href="#services">{{ s.title }}</a>
           </li>
         </ul>
@@ -60,16 +49,8 @@ onBeforeUnmount(() => window.removeEventListener('keydown', onKey))
         </ul>
       </div>
 
-      <div class="footer__col footer__news">
-        <h4>Stay in the loop</h4>
-        <p class="footer__news-text">
-          Seasonal tips and offers for keeping your home looking its best.
-        </p>
-        <form class="footer__sub" @submit.prevent="subscribe">
-          <input v-model="email" type="email" required placeholder="Your email" aria-label="Your email" />
-          <button type="submit" class="btn btn--verde">Subscribe</button>
-        </form>
-        <p v-if="subscribed" class="footer__sub-ok">✓ Thanks! Your email app should open to confirm.</p>
+      <div class="footer__col">
+        <h4>Contact</h4>
         <ul class="footer__contact">
           <li><a :href="`tel:${company.phoneLink}`">📞 {{ company.phone }}</a></li>
           <li><a :href="`mailto:${company.email}`">✉ {{ company.email }}</a></li>
