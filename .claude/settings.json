@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(node -e ' *)",
-      "Bash(git commit -q -m ' *)"
+      "Bash(git commit -q -m ' *)",
+      "WebFetch(domain:rdap.verisign.com)",
+      "PowerShell($src = \"C:\\\\Users\\\\jovposga\\\\Downloads\\\\IMG_9167.HEIC\"; $dst = \"C:\\\\Users\\\\jovposga\\\\Desktop\\\\empresa-web\\\\tmp-convert\\\\solar2-raw.jpg\"; try { Add-Type -AssemblyName PresentationCore; $stream = [System.IO.File]::OpenRead\\($src\\); $decoder = [System.Windows.Media.Imaging.BitmapDecoder]::Create\\($stream, [System.Windows.Media.Imaging.BitmapCreateOptions]::None, [System.Windows.Media.Imaging.BitmapCacheOption]::OnLoad\\); $frame = $decoder.Frames[0]; $enc = New-Object System.Windows.Media.Imaging.JpegBitmapEncoder; $enc.QualityLevel = 92; $enc.Frames.Add\\($frame\\); $out = [System.IO.File]::Open\\($dst,'Create'\\); $enc.Save\\($out\\); $out.Close\\(\\); $stream.Close\\(\\); Write-Output \\(\"OK \" + $frame.PixelWidth + \"x\" + $frame.PixelHeight\\) } catch { Write-Output \\(\"FAIL: \" + $_.Exception.Message\\) })"
     ]
   }
 }

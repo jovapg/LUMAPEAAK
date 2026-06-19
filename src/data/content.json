@@ -76,7 +76,7 @@
     {
       "icon": "☀️",
       "iconKey": "solar",
-      "images": ["/services/solar-panel.jpg"],
+      "images": ["/services/solar-panel.jpg", "/services/solar-panel-2.jpg"],
       "title": "Solar Panel Cleaning",
       "price": "Starting at $150",
       "description": "Soft brushes, Water Fed Pole system and deionized water safely clean your panels without causing damage — keeping them efficient.",
