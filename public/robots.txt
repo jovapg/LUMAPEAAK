@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lumapeak-services.netlify.app/sitemap.xml
+Sitemap: https://lumapeakservices.com/sitemap.xml
