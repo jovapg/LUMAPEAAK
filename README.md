@@ -11,6 +11,10 @@ Sitio web en producción para **LumaPeak Services**, empresa de limpieza exterio
 
 > 📸 *Agrega aquí una captura del home.*
 
+<img width="910" height="422" alt="luma 2" src="https://github.com/user-attachments/assets/a2ac0bc2-cf15-42dd-8ab8-d0cc00f21948" />
+<img width="763" height="456" alt="luma 1" src="https://github.com/user-attachments/assets/83ceeb42-ba10-401a-8ba0-e0e69c1e1d07" />
+<img width="869" height="453" alt="luma 3" src="https://github.com/user-attachments/assets/259a9e4d-b7ef-4a53-acb2-ffa98274f2e7" />
+
 ---
 
 ## ✨ Características
